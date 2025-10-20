@@ -1,1 +1,1 @@
-# fpga-vga-veriloggKM
+# fpga-vga-verilog
