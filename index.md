@@ -52,16 +52,36 @@ Briefly show how you changed the template code to display a different image. Dem
 Originally we had a template code of different coloured stripes running vertically across the screen. Through trial and error I managed to make make it into a staircase and then into what was meant to be the start of a PAC-MAN graphic. At that point I had gotten the gist of how to control each pixel. If i could have one big one then I could split that into many small ones and display a nice graphic, so thats what I did.
 
 I could see how much work it was going to be so I mapped it out on paper, from there it was just lots of `if else` statements. Each with their own co-ordinate where they will be displayed on the screen. Set into rows and columns. I decided to make the boxes 16 x 16, there was 40 blocks of 16 for the rows and 30 blocks of 16 for columns, this was because in the inspired design it was set into ....................explain the squares on the original design . I used `ChatGPT` to generate me the colours beige and gray.
-<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/firstplan.jpg" width="40%">
-  <p style="font-size: 22px;">
-Here was my first plan I did it class fro the left side of the graphic.
-    </p>
-</div>
-<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/planpic.jpg" width="50%">
-Here is the plan for the right side of the graphic I did at home.
-<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/finalPlan.jpg" width="50%">
-This is the final plan with the two put together.
+I used `ChatGPT` to generate me the colours beige and gray.
+
+<table>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/firstplan.jpg" style="width:50%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      Here was my first plan I did in class for the left side of the graphic.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/planpic.jpg" style="width:50%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      Here is the plan for the right side of the graphic I did at home.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/finalPlan.jpg" style="width:50%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      This is the final plan with the two put together.
+    </td>
+  </tr>
+</table>
 
 
 
@@ -86,9 +106,19 @@ Describe the synthesis & implementation outputs for your design, are there any d
 
 
 ### **Demonstration**
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
-<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/wolverinefinal.jpg"width="50%">
-This was my final Wolverine design. I am very happy with the outcome as I eliminated almost all of the errors from my last attempt at the final version.
+<p>If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.</p>
+
+<table>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/wolverinefinal.jpg" style="width:50%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      This was my final Wolverine design. I am very happy with the outcome as I eliminated almost all of the errors from my last attempt at the final version.
+    </td>
+  </tr>
+</table>
+
 
 
 
