@@ -53,7 +53,7 @@ Originally we had a template code of different coloured stripes running vertical
 
 I could see how much work it was going to be so I mapped it out on paper, from there it was just lots of `if else` statements. Each with their own co-ordinate where they will be displayed on the screen. Set into rows and columns. I decided to make the boxes 16 x 16, there was 40 blocks of 16 for the rows and 30 blocks of 16 for columns, this was because in the inspired design it was set into ....................explain the squares on the original design . I used `ChatGPT` to generate me the colours beige and gray.
 <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/firstplan.jpg" width="50%">
+<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/firstplan.jpg" width="40%">
   <p style="font-size: 22px;">
 Here was my first plan I did it class fro the left side of the graphic.
     </p>
