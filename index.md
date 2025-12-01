@@ -1,6 +1,6 @@
 ---
 layout: home
-title: FPGA VGA Driver Project
+title: "FPGA VGA Driver Project"
 tags: fpga vga verilog
 categories: demo
 ---
@@ -32,10 +32,11 @@ Outline the structure and design of the Verilog code templates you were given. W
 <table>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/simulationProcess.png" style="width:50%;">
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/simulationProcess.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-      Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+      Simulation is the first step in verifying the VGA design before running it on physical FPGA hardware. Using the testbench in Vivado, I ran a behavioural simulation, this allowed me to observe signals such as `hsync`, `vsync`,`(row, col)`, and the RGB outputs in the waveform window. This shows me that the VGA timing pulses are correct and they only appear when `vid-on` is active. Simulation is important because it lets us verify the Verilog logic before Vivado turns it into real hardware components like LUT's, flip-flops, CBL's and interconnect.
+      <a href="https://vlegalwaymayo.atu.ie/pluginfile.php/1619154/mod_resource/content/1/11_7-Series%20Architecture%20Overview.pdf">Lecture Notes pages 4-16 </a>
     </td>
   </tr>
 </table>
@@ -46,10 +47,25 @@ Outline the structure and design of the Verilog code templates you were given. W
 <table>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesisDesign.png" style="width:50%;">
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesisDesign.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-      Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+Synthesis is the step where Vivado converts my Verilog code into real FPGA hardware components. During this stage, the tool maps my design into resources used in 7-Series devices such as LUTs, flip-flops, CLBs, multiplexers, and carry chains. The synthesised schematic in Vivado shows how modules like the VGA timing generator and colour-stripe module are implemented using these hardware blocks. This process checks that the design can be built correctly using the FPGA’s logic before moving on to physical placement.
+ <a href="https://vlegalwaymayo.atu.ie/pluginfile.php/1619154/mod_resource/content/1/11_7-Series%20Architecture%20Overview.pdf">Lecture Notes pages 9-17 </a>
+ 
+    
+  </tr>
+</table>
+
+
+### **Implementation**
+<table>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/Screenshot 2025-12-01 151252.png" style="width:100%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      Implementation performs the placement and the routing. Here, the synthetic logic is placed onto the physical layout of the FPGA and connects everything using the programmable interconnect. It also sets up clock routing using resources such as BUFG global buffers and clock regions. <a href="https://vlegalwaymayo.atu.ie/pluginfile.php/1619154/mod_resource/content/1/11_7-Series%20Architecture%20Overview.pdf">Lecture Notes pages 47-50 </a> The device view shows where each module is placed on the chip. Once routing meets timing requirements, the design is ready to be programmed onto the Basys3 board.
     </td>
   </tr>
 </table>
@@ -58,10 +74,10 @@ Outline the structure and design of the Verilog code templates you were given. W
 <table>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/Screenshot 2025-12-01 151252.png" style="width:50%;">
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/wolverinefinal.jpg" style="width:50%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-      Perhaps add a picture of your demo. Guideline: 1/2 sentences.
+      The image below shows my Wolverine graphic running on the Basys3 board, confirming that my VGA driver design works correctly on hardware.
     </td>
   </tr>
 </table>
