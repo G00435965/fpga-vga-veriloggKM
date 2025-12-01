@@ -186,9 +186,9 @@ Describe the synthesis & implementation outputs for your design, are there any d
   </tr>
 </table>
 
-Here is the Basys3 board I used.
-<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/board.jpg" width="50%">
 
+<img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/board.jpg" width="50%">
+Here is the Basys3 board I used.
 
 
 
