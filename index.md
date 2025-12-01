@@ -29,13 +29,42 @@ The lab provided a full Vivado project containing a VGA timing module, a top mod
 
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
 ### **Simulation**
-Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+<table>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/simulationProcess.png" style="width:50%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+    </td>
+  </tr>
+</table>
+
+
+
 ### **Synthesis**
-Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+<table>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesisDesign.png" style="width:50%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+    </td>
+  </tr>
+</table>
+
 ### **Demonstration**
-Perhaps add a picture of your demo. Guideline: 1/2 sentences.
-
-
+<table>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/Screenshot 2025-12-01 151252.png" style="width:50%;">
+    </td>
+    <td style="padding-left:20px; font-size:20px;">
+      Perhaps add a picture of your demo. Guideline: 1/2 sentences.
+    </td>
+  </tr>
+</table>
 
 
 
