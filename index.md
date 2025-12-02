@@ -52,6 +52,8 @@ The lab provided a full Vivado project containing a VGA timing module, a top mod
     <td style="padding-left:20px; font-size:20px;">
 Synthesis is the step where Vivado converts my Verilog code into real FPGA hardware components. During this stage, the tool maps my design into resources used in 7-Series devices such as LUTs, flip-flops, CLBs, multiplexers, and carry chains. The synthesised schematic in Vivado shows how modules like the VGA timing generator and colour-stripe module are implemented using these hardware blocks. This process checks that the design can be built correctly using the FPGA’s logic before moving on to physical placement. [2]
  <a href="https://vlegalwaymayo.atu.ie/pluginfile.php/1619154/mod_resource/content/1/11_7-Series%20Architecture%20Overview.pdf">Lecture Notes pages 9-17 </a>
+
+ The simulation shows that my VGA timing and colours behave correctly, so the design is ready for synthesis and hardware testing.
  
     
   </tr>
@@ -116,7 +118,7 @@ I picked the Wolverine character from X-Men as my graphic design. I was original
 ### **Code Adaptation**
 Originally we had a template code of different coloured stripes running vertically across the screen. Through trial and error I managed to make make it into a staircase and then into what was meant to be the start of a PAC-MAN graphic. At that point I had gotten the gist of how to control each pixel. If i could have one big one then I could split that into many small ones and display a nice graphic, so thats what I did.
 
-I could see how much work it was going to be so I mapped it out on paper, from there it was just lots of `if else` statements. Each with their own co-ordinate where they will be displayed on the screen. Set into rows and columns. I decided to make the boxes 16 x 16, there was 30 blocks of 16 for the rows and 40 blocks of 16 for columns, this was because in the inspired design it was set into 23 blocks for colomns, therefore 40 was more than enough space for the graphic to fit on the monitor. The same went with how big the insipiration graphic was for rows, if you count how many blocks tall the character is you will count 26 blocks tall, that means me giving 30 blocks for rows was just enough with leaving 2 blocks of tolerance for the head and the feet. I used `ChatGPT` to generate me the colours beige and gray. EXPLAIN WHY ITS BEHIND BY ONE EG.479
+I could see how much work it was going to be so I mapped it out on paper, from there it was just lots of `if else` statements. Each with their own co-ordinate where they will be displayed on the screen. Set into rows and columns. I decided to make the boxes 16 x 16, there was 30 blocks of 16 for the rows and 40 blocks of 16 for columns, this was because in the inspired design it was set into 23 blocks for colomns, therefore 40 was more than enough space for the graphic to fit on the monitor. The same went with how big the insipiration graphic was for rows, if you count how many blocks tall the character is you will count 26 blocks tall, that means me giving 30 blocks for rows was just enough with leaving 2 blocks of tolerance for the head and the feet. I used  [5] <a href="https://chatgpt.com/">ChatGPT</a> to generate me the colours beige and gray. EXPLAIN WHY ITS BEHIND BY ONE EG.479
 
 
 <table>
@@ -164,8 +166,8 @@ I could see how much work it was going to be so I mapped it out on paper, from t
       <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/simulationProcess.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-     In my Vivado behavioural simulation, the waveform shows the VGA controller operating correctly. The clock runs continuously, and once the reset signal goes low, the timing logic begins stepping through each pixel. The col counter rapidly increases across each line, while the row counter increments once per full sweep of the screen, demonstrating proper horizontal and vertical counting. The hsync signal generates regular pulses for each completed line, and vsync produces a much slower pulse once per frame. The vid_on signal goes high only during the 640×480 visible display area, and during this time the RGB outputs change according to my colour-stripe module. This confirms that the VGA module is producing correct pixel positions, sync pulses, and video-active periods.
-      <a href="[https://vlegalwaymayo.atu.ie/pluginfile.php/1619154/mod_resource/content/1/11_7-Series%20Architecture%20Overview.pdf](https://chatgpt.com/)">ChatGPT</a>
+     This is my Vivado behavioural simulation, my waveform shows the VGA controller operating correctly. The clock is running contantly, once the reset signal goes low, the timing logic steps through each pixel. The column counter rapidly increases across each line, while the row counter increments once per full sweep of the screen, this demonstrates proper horizontal and vertical counting. The hsync signal is generating regular pulses for each line that is complete, and once per frame the vsync generates a pulse. The vid_on signal goes high only during the 640×480 visible display area, and during this time the RGB outputs change according to my colour-stripe module. [6]
+      <a href="https://chatgpt.com/">ChatGPT</a> This confirms that the VGA module is producing correct pixel positions, sync pulses, and video-active periods. 
     </td>
   </tr>
 </table>
@@ -176,11 +178,10 @@ I could see how much work it was going to be so I mapped it out on paper, from t
 <table>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesisDesign.png" style="width:100%;">
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/Screenshot 2025-12-01 151252.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-Synthesis is the step where Vivado converts my Verilog code into real FPGA hardware components. During this stage, the tool maps my design into resources used in 7-Series devices such as LUTs, flip-flops, CLBs, multiplexers, and carry chains. The synthesised schematic in Vivado shows how modules like the VGA timing generator and colour-stripe module are implemented using these hardware blocks. This process checks that the design can be built correctly using the FPGA’s logic before moving on to physical placement. [2]
- <a href="https://vlegalwaymayo.atu.ie/pluginfile.php/1619154/mod_resource/content/1/11_7-Series%20Architecture%20Overview.pdf">Lecture Notes pages 9-17 </a>
+Synthesis translated my Verilog VGA controller into the actual schematic with the FPGA components it will use: counters for pixel positions, logic gates to generate sync pulses, LUTs for my colour-stripe display, and registers for timing. The schematic shows how these blocks are connected, confirming that Vivado has successfully mapped my code into real 7-Series FPGA hardware. [7] <a href="https://chatgpt.com/">ChatGPT</a>
  
     
   </tr>
@@ -191,10 +192,10 @@ Synthesis is the step where Vivado converts my Verilog code into real FPGA hardw
 <table>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/Screenshot 2025-12-01 151252.png" style="width:100%;">
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesisDesign.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-      Implementation performs the placement and the routing. Here, the synthetic logic is placed onto the physical layout of the FPGA and connects everything using the programmable interconnect. It also sets up clock routing using resources such as BUFG global buffers and clock regions. [3] <a href="https://vlegalwaymayo.atu.ie/pluginfile.php/1619154/mod_resource/content/1/11_7-Series%20Architecture%20Overview.pdf">Lecture Notes pages 47-50 </a> The device view shows where each module is placed on the chip. Once routing meets timing requirements, the design is ready to be programmed onto the Basys3 board.
+     need to get a zoomed in pic
     </td>
   </tr>
 </table>
