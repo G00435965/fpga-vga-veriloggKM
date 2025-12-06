@@ -195,7 +195,7 @@ Synthesis translated my Verilog VGA controller into the actual schematic with th
       <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesis_design.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-     need to get a zoomed in pic
+     My Implementation view is Vivado showing me where it decided to place my design on the actual FPGA. On the left are the real pins the VGA cable connects to, and in the centre is where all my logic — the timing generator, counters, and colour code gets packed into the chip. The grid on the right is Vivado’s way of showing all the tiny connections it made to join everything together. In simple terms, this is the final physical layout of my design that actually ends up running on the Basys3.
     </td>
   </tr>
 </table>
