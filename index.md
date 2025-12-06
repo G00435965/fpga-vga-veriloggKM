@@ -195,7 +195,7 @@ Synthesis translated my Verilog VGA controller into the actual schematic with th
       <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesis_design.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
-     My Implementation view is Vivado showing me where it decided to place my design on the actual FPGA. On the left are the real pins the VGA cable connects to, and in the centre is where all my logic — the timing generator, counters, and colour code gets packed into the chip. The grid on the right is Vivado’s way of showing all the tiny connections it made to join everything together. In simple terms, this is the final physical layout of my design that actually ends up running on the Basys3.
+     My Implementation view is Vivado showing me where it decided to place my design on the actual FPGA. On the left are the real pins the VGA cable connects to, and in the centre is where all my logic — the timing generator, counters, and colour code gets packed into the chip. The grid on the right is Vivado’s way of showing all the tiny connections it made to join everything together. In simple terms, this is the final physical layout of my design that actually ends up running on the Basys3. [8] <a href="https://chatgpt.com/">ChatGPT</a>
     </td>
   </tr>
 </table>
@@ -226,7 +226,7 @@ Michelle Lynch lecture notes, Used for info on processes such as Simulation, Syn
 
 Prohama, Used for inspiration on what graphic to design, Available Online: <a href="https://prohama.com/wolverine-pattern-1/">Inspiration design</a> [4]
 
-ChatGPT, Used to break down and explain how the processes worked and generate colours, Available Online: <a href="https://chatgpt.com/">ChatGPT</a> [5] [6] [7] [8]
+ChatGPT, Used to break down and explain how the processes worked and then putting it into my own words, I also used it to generate colours, Available Online: <a href="https://chatgpt.com/">ChatGPT</a> [5] [6] [7] [8]
 
 
 
