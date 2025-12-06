@@ -192,7 +192,7 @@ Synthesis translated my Verilog VGA controller into the actual schematic with th
 <table>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesisDesign.png" style="width:100%;">
+      <img src="https://raw.githubusercontent.com/G00435965/fpga-vga-veriloggKM/main/docs/assets/images/synthesis_design.png" style="width:100%;">
     </td>
     <td style="padding-left:20px; font-size:20px;">
      need to get a zoomed in pic
